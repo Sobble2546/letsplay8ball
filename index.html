@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's play 8 Ball!</title>
+  <meta property="og:title" content="Let's play 8 Ball!" />
+  <meta property="og:description" content="Let's play 8 Ball!" />
+  <meta property="og:image" content="https://files.catbox.moe/kjhpag.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io/letsplay8ball/" />
+  <style>
+    body {
+      background: #ececec;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 24px 24px 12px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 420px;
+    }
+    .pool-table {
+      position: relative;
+      width: 380px;
+      height: 200px;
+      background: #1a7c6b;
+      border: 16px solid #7b3f1d;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      margin-bottom: 16px;
+    }
+    .pocket {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: #111;
+      border-radius: 50%;
+    }
+    .pocket.tl { top: -14px; left: -14px; }
+    .pocket.tr { top: -14px; right: -14px; }
+    .pocket.bl { bottom: -14px; left: -14px; }
+    .pocket.br { bottom: -14px; right: -14px; }
+    .pocket.ml { top: 50%; left: -14px; transform: translateY(-50%); }
+    .pocket.mr { top: 50%; right: -14px; transform: translateY(-50%); }
+    .cue-ball {
+      position: absolute;
+      left: 80px;
+      top: 85px;
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-radius: 50%;
+      border: 2px solid #eee;
+      z-index: 2;
+    }
+    .rack {
+      position: absolute;
+      right: 60px;
+      top: 60px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    .ball {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 1px;
+      border: 1.5px solid #fff;
+      background: #f9d923;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
+    .play-btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(0,0,0,0.18);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .play-btn:hover {
+      background: rgba(0,0,0,0.28);
+    }
+    .play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: #2ecc40;
+    }
+    .caption {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #222;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="pool-table">
+      <div class="pocket tl"></div>
+      <div class="pocket tr"></div>
+      <div class="pocket bl"></div>
+      <div class="pocket br"></div>
+      <div class="pocket ml"></div>
+      <div class="pocket mr"></div>
+      <div class="cue-ball"></div>
+      <div class="rack">
+        <div class="ball" style="background:#f9d923"></div>
+        <div class="ball" style="background:#e94560"></div>
+        <div class="ball" style="background:#3a86ff"></div>
+        <div class="ball" style="background:#ffbe0b"></div>
+        <div class="ball" style="background:#8338ec"></div>
+        <div class="ball" style="background:#ff006e"></div>
+        <div class="ball" style="background:#43aa8b"></div>
+        <div class="ball" style="background:#f3722c"></div>
+        <div class="ball" style="background:#277da1"></div>
+        <div class="ball" style="background:#f94144"></div>
+      </div>
+      <div class="play-btn" onclick="alert('Let\'s play 8 Ball!')">
+        <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" stroke="#2ecc40" stroke-width="3" fill="none"/><polygon points="25,18 45,30 25,42"/></svg>
+      </div>
+    </div>
+    <div class="caption">Let's play 8 Ball!</div>
+  </div>
+</body>
+</html>
