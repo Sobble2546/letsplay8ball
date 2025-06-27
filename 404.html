@@ -44,6 +44,13 @@
       text-align: center;
     }
   </style>
+  <script>
+    // If loaded as 404.html, replace the URL with the original path (no redirect)
+    if (window.location.pathname.endsWith('/404.html')) {
+      const originalPath = window.location.pathname.replace(/\/404.html$/, '/');
+      window.history.replaceState({}, '', originalPath);
+    }
+  </script>
 </head>
 <body>
   <div class="container">
